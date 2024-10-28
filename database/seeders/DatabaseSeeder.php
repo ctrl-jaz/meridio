@@ -27,20 +27,20 @@
                 'Country' => 'Sweden'
                 ],
                 [
-                    'name' => 'Red Riding Hood',
-                    'email' =>'LittleRed@Meridio.com',
-                    'password' => Hash::make('1234567'),
-                    'user_type' => 'Recipient',
-                    'phone_number' => '072985611',
-                    'Country' => 'Sweden'
+                'name' => 'Red Riding Hood',
+                'email' =>'LittleRed@Meridio.com',
+                'password' => Hash::make('1234567'),
+                'user_type' => 'Recipient',
+                'phone_number' => '072985611',
+                'Country' => 'Sweden'
                 ],
                 [
-                        'name' => 'Jack Jackson',
-                        'email' =>'JacJac@Meridio.com',
-                        'password' => Hash::make('1234567'),
-                        'user_type' => 'Donor',
-                        'phone_no' => '0720333111',
-                        'location' => 'South Africa'
+                'name' => 'Jack Jackson',
+                'email' =>'JacJac@Meridio.com',
+                'password' => Hash::make('1234567'),
+                'user_type' => 'Donor',
+                'phone_no' => '072038974',
+                'location' => 'South Africa'
                 ]
                 ];
                 //Step 2: insert the array using Query Builder

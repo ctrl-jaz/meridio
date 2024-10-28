@@ -13,7 +13,8 @@ class DonationsController extends Controller
      */
     public function index()
     {
-        //
+        $donations = donations::all();
+        return $donations;
     }
 
     /**
@@ -29,7 +30,14 @@ class DonationsController extends Controller
      */
     public function store(StoreDonationsRequest $request)
     {
-        //
+        $donation = new Donations;
+        
+        $donations->user_id = $request->user_id;
+        $donations->category_id = $request->category_id;
+        $donations->amount = $request->amount;
+
+        $donations->save();
+        return $donations;
     }
 
     /**
@@ -53,7 +61,14 @@ class DonationsController extends Controller
      */
     public function update(UpdateDonationsRequest $request, Donations $donations)
     {
-        //
+        $donations = Donations::find($request->id);
+
+        $donations->user_id = $request->user_id;
+        $donations->category_id = $request->category_id;
+        $donations->amount = $request->amount;
+
+        $donations->save();
+        return $donations;
     }
 
     /**

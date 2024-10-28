@@ -13,7 +13,8 @@ class RequestsController extends Controller
      */
     public function index()
     {
-        //
+        $requests = requests::all();
+        return $requests;
     }
 
     /**
@@ -29,7 +30,13 @@ class RequestsController extends Controller
      */
     public function store(StoreRequestsRequest $request)
     {
-        //
+        $requests=new requests;
+        $requests->user_id = $request->user_id;
+        $requests->category_id = $request->category_id;
+        $requests->request_status = $request->requests_status;
+
+        $requests->save();
+        return $requests;
     }
 
     /**
@@ -53,7 +60,14 @@ class RequestsController extends Controller
      */
     public function update(UpdateRequestsRequest $request, Requests $requests)
     {
-        //
+        $requests = request::find($request->id);
+
+        $requests->user_id = $request->user_id;
+        $requests->category_id = $request->category_id;
+        $requests->request_status = $request->request_status;
+
+        $requests->save();
+        return $requests;
     }
 
     /**
